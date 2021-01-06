@@ -1,0 +1,10 @@
+{
+  "name": "nodejs.nginx",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
