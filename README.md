@@ -18,3 +18,8 @@ cd nginx-1.18.0 start nginx
 cd nginx-1.18.0 ./nginx.exe -s reload
 # 退出nginx
 cd nginx-1.18.0 ./nginx.exe -s quit
+
+### nginx相关配置
+nginx>conf>nginx.conf  
+可修改端口  
+当前 路径/html和/assets下为静态文件，开启服务后可直接访问，其他路径会代理到9998端口下的node服务
