@@ -2,8 +2,8 @@
   "name": "nodejs.nginx",
   "version": "0.1.0",
   "scripts": {
-    "start": "node app.js & cd nginx-1.18.0 && start nginx",
-    "reload": "node app.js & cd nginx-1.18.0 && ./nginx.exe -s reload"
+    "start": "cd nginx-1.18.0 && start nginx && cd ../ && node app.js",
+    "reload": "cd nginx-1.18.0 && ./nginx.exe -s reload && node app.js"
   },
   "dependencies": {
     "express": "^4.17.1"
