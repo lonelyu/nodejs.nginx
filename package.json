@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "scripts": {
     "start": "cd nginx-1.18.0 && start nginx && cd ../ && nodemon app.js",
-    "reload": "cd nginx-1.18.0 && ./nginx.exe -s reload && node app.js"
+    "reload": "cd nginx-1.18.0 && ./nginx.exe -s reload && cd ../ && nodemon app.js"
   },
-  "type":"module",
+  "type": "module",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^7.18.0",
