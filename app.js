@@ -8,8 +8,8 @@ import indexRouter from './src/api/index.js';
 // 数据库路由信息（接口地址），存放在routes的根目录
 import searchRoute from './routes/search.mjs';
 import addRoute from './routes/add.mjs';
-// import editRoute from './routes/edit.mjs';
-// import delRoute from './routes/del.mjs';
+import editRoute from './routes/edit.mjs';
+import delRoute from './routes/del.mjs';
 
 const app = Express();
 
@@ -24,8 +24,8 @@ app.use(Express.static('public'));
 app.use('/', indexRouter);
 
 app.use('/add', addRoute);//增
-// app.use('/del', delRoute);//删
-// app.use('/edit', editRoute);//改
+app.use('/del', delRoute);//删
+app.use('/edit', editRoute);//改
 app.use('/search', searchRoute);//查
 
 // 错误处理

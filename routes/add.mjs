@@ -29,9 +29,9 @@ router.post('/', function (req, res) {
   mysql.query(`INSERT INTO ${req.body.tableName}(${key.join(',')}) VALUES(${ex.join(',')})`, value, function (err, result) {
     if (err) {
       console.log('[INSERT ERROR] - ', err.message);
-      res.send({ code: 101, data: 'success', msg: err.message });
+      res.send({ code: 101, data: 'err', msg: err.message });
     } else {
-      res.send({ code: 200, data: 'success' });
+      res.send({ code: 200, data: result });
     }
   });
   mysql.end();

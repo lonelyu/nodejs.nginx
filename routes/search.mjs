@@ -23,7 +23,7 @@ router.get('/', function (req, res) {
     mysql.query(`SELECT * FROM ${params.tableName}`,function (err, result) {
       if (err) {
         console.log('[INSERT ERROR] - ', err.message);
-        res.send({ code: 101, data: 'success', msg: err.message });
+        res.send({ code: 101, data: err, msg: err.message });
       } else {
         res.send({ code: 200, data: result });
       }
